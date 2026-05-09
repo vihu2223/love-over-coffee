@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Over Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+
+        <div class="logo-text">
+          <span class="l">L</span><span>ove</span><br>
+          <span class="o">O</span><span>ver</span><br>
+          <span class="c">C</span><span>offee</span>
+        </div>
+      
+        <img src="assets/images/logo.png" alt="logo" class="logo-icon">
+      
+      </div>
+  <nav class="menu">
+    <a class="active">Home</a>
+    <a>Menu</a>
+    <a>Order Online</a>
+    <a>Nearby Store</a>
+    <a>About Us</a>
+  </nav>
+
+  <button class="btn">Sign In</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-left">
+      <h1>Explore Our Chef’s<br>Special</h1>
+      <div class="hero-left-bottom">
+        <img src="assets/Hero/beans.png" class="beans">
+        <button class="explore-btn">Explore All &rarr;</button>
+        <img src="assets/images/Logo.png" class="hero-cup">
+      </div>
+    </div>
+  
+    <!-- RIGHT SHOWCASE -->
+    <div class="hero-right">
+  
+      <!-- BACKGROUND CURVES -->
+      <div class="bg">
+        <div class="ellipse e1"></div>
+        <div class="ellipse e2"></div>
+        <div class="ellipse e3"></div>
+        <div class="ellipse e4"></div>
+        
+      </div>
+  
+      <!-- COFFEE IMAGES -->
+      <div class="carousel">
+        <img src="assets/Hero/c1.png" class="coffee" onclick="moveToCenter(0)">
+        <img src="assets/Hero/c2.png" class="coffee" onclick="moveToCenter(1)">
+        <img src="assets/Hero/c3.png" class="coffee active" onclick="moveToCenter(2)">
+        <img src="assets/Hero/c4.png" class="coffee" onclick="moveToCenter(3)">
+        <img src="assets/Hero/c5.png" class="coffee" onclick="moveToCenter(4)">
+      </div>
+  
+    </div>
+  </section>
+
+<!-- ABOUT / STORES -->
+<section class="about-stores">
+  <div class="about-left">
+    <div class="green-blob"></div>
+    <div class="store-collage">
+      <img src="assets/images/store1.png" alt="Store Front" class="store-img img1">
+      <img src="assets/images/store2.png" alt="Store Interior" class="store-img img2">
+      <img src="assets/images/store3.png" alt="Store Exterior" class="store-img img3">
+    </div>
+    <img src="assets/images/coffeeCup.png" alt="Coffee Cup" class="about-cup">
+  </div>
+  
+  <div class="about-right">
+    <h2><span class="teal">L</span>ove <span class="teal">O</span>ver <span class="teal">C</span>offee</h2>
+    <p>Hearts connect, stories brew over<br>coffee moments.</p>
+    <button class="discover-btn">Discover Our Stores &rarr;</button>
+  </div>
+</section>
+
+<!-- CUSTOMER CHOICES -->
+<section class="choices">
+  <h2>Our Customer Choices</h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/dalgona.png">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Dalgona Coffee</h3>
+        <p>luffy coffee drink that combines<br>whipped coffee cream with smooth milk.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/mocha.png">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Mocha Coffee</h3>
+        <p>luffy coffee drink that combines<br>whipped coffee cream with smooth milk.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/caramel.png">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Caramel Hazelnut</h3>
+        <p>luffy coffee drink that combines<br>whipped coffee cream with smooth milk.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/iced.png">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Iced Cold Coffee</h3>
+        <p>luffy coffee drink that combines<br>whipped coffee cream with smooth milk.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/tiramisu.png">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Tiramisu Brownie</h3>
+        <p>luffy coffee drink that combines<br>whipped coffee cream with smooth milk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer">
+  <div class="offer-content">
+    
+    <!-- Left Glass Panel -->
+    <div class="offer-glass-panel">
+      <!-- Cute Cup Placeholder -->
+      <img src="assets/images/Logo.png" alt="Cute Cup" class="offer-cup-img">
+      
+      <!-- Notification Bubble -->
+      <div class="offer-notification">
+        <div class="notif-avatar"></div>
+        <div class="notif-text">
+          <strong>Vivek</strong>
+          <p>Love over Coffee ? Today!</p>
+        </div>
+        <span class="notif-time">9:41 AM</span>
+      </div>
+      
+      <!-- Order Button -->
+      <button class="offer-order-btn">Order Now &rarr;</button>
+    </div>
+    
+    <!-- Right Title Box -->
+    <div class="offer-title-box">
+      <h2>Today's Deal</h2>
+    </div>
+    
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="gallery-content">
+    
+    <!-- Left: Typography Art -->
+    <div class="gallery-text-art">
+      <div class="text-grid">
+        <!-- Row 1 -->
+        <div class="text-row">
+          <span class="teal-text left-char">L</span>
+          <span class="right-chars">VE</span>
+        </div>
+        <!-- Row 2 -->
+        <div class="text-row">
+          <div class="left-char cup-char">
+            <img src="assets/images/Logo.png" alt="Cup Icon">
+          </div>
+          <span class="right-chars">VER</span>
+        </div>
+        <!-- Row 3 -->
+        <div class="text-row">
+          <span class="teal-text left-char">C</span>
+          <span class="right-chars">FFEE</span>
+        </div>
+        
+        <!-- The Absolute Tall O -->
+        <div class="tall-o"></div>
+      </div>
+      
+      <div class="inspiration-text">Moments</div>
+    </div>
+    
+    <!-- Right: Image Collage -->
+    <div class="gallery-images">
+      <img src="assets/gallery/img1.png" class="gal-img img-1" alt="Gallery Image">
+      <img src="assets/gallery/img2.png" class="gal-img img-2" alt="Gallery Image">
+      <img src="assets/gallery/img3.png" class="gal-img img-3" alt="Gallery Image">
+      <img src="assets/gallery/img4.png" class="gal-img img-4" alt="Gallery Image">
+      <img src="assets/gallery/img5.png" class="gal-img img-5" alt="Gallery Image">
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <!-- Decorative Cups -->
+  <img src="assets/images/coffeeCup.png" alt="Decorative Cup" class="footer-cup left-cup">
+  <img src="assets/images/coffeeCup.png" alt="Decorative Cup" class="footer-cup right-cup">
+  
+  <div class="footer-content">
+    <h2 class="footer-heading">SUBSCRIBE TO GET LATEST NEWS</h2>
+
+    <div class="subscribe-box">
+      <input type="email" placeholder="EMAIL"/>
+      <button>SUBMIT</button>
+    </div>
+
+    <div class="footer-links-grid">
+      <div class="footer-col">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="#">MENU</a></li>
+          <li><a href="#">FEATURES</a></li>
+          <li><a href="#">HELP & SUPPORT</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>COMPANY</h3>
+        <ul>
+          <li><a href="#">HOW WE WORK</a></li>
+          <li><a href="#">TERMS AND CONDITION</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact-col">
+        <h3>CONTACT US</h3>
+        <p>F 5, Jamnalal Bajaj<br>Marg, Ashok Nagar,<br>C Scheme, Jaipur-</p>
+        <p class="phone">+91 9XXXXXXXXX</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
