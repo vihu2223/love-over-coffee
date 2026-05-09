@@ -25,9 +25,11 @@ Simply download or clone the repository and open `index.html` in your favorite w
 git clone https://github.com/vihu2223/love-over-coffee.git
 ```
 
-## 📸 Preview
+## 📸 Preview :
 
-*(You can add screenshots of your beautiful website here!)*
+<img width="399" height="390" alt="Screenshot 2026-05-10 at 02 12 04" src="https://github.com/user-attachments/assets/ab7fd03d-a13d-410d-8a3f-807640dacbc6" />
+<img width="399" height="461" alt="Screenshot 2026-05-10 at 02 12 16" src="https://github.com/user-attachments/assets/06acbcdf-f663-4adc-8a5c-3f0a24db50a4" />
+
 
 ---
 *Crafted with ❤️ and a lot of coffee.*
