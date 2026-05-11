@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Love Over Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
+  <style>
+    .menu-header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+    .menu-header h1 {
+      font-family: 'Shalimar', cursive;
+      font-size: 80px;
+      color: #1E9583;
+      margin-bottom: 10px;
+    }
+    .menu-header p {
+      font-size: 22px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+
+        <div class="logo-text">
+          <span class="l">L</span><span>ove</span><br>
+          <span class="o">O</span><span>ver</span><br>
+          <span class="c">C</span><span>offee</span>
+        </div>
+      
+        <img src="assets/images/logo.png" alt="logo" class="logo-icon">
+      
+      </div>
+  <nav class="menu">
+    <a href="index.html" class="page-link">Home</a>
+    <a href="menu.html" class="active page-link">Menu</a>
+    <a href="#">Order Online</a>
+    <a href="#">Nearby Store</a>
+    <a href="#">About Us</a>
+  </nav>
+
+  <button class="btn">Sign In</button>
+</header>
+
+<!-- MENU HEADER -->
+<div class="menu-header">
+  <h1>Our Special Menu</h1>
+  <p>Handcrafted drinks brewed with passion and love.</p>
+</div>
+
+<!-- CUSTOMER CHOICES -->
+<section class="choices" style="margin-bottom: 60px; border-radius: 40px; margin-left: 40px; margin-right: 40px;">
+  <h2>Coffee & Beverages</h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/dalgona.png" alt="Dalgona">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Dalgona Coffee</h3>
+        <p>Fluffy coffee drink that combines<br>whipped coffee cream with smooth milk.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/mocha.png" alt="Mocha">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Mocha Coffee</h3>
+        <p>Rich chocolatey coffee drink that combines<br>espresso with hot milk and cocoa.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/caramel.png" alt="Caramel">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Caramel Hazelnut</h3>
+        <p>Sweet caramel and nutty hazelnut flavors<br>blended to perfection.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/iced.png" alt="Iced">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Iced Cold Coffee</h3>
+        <p>Refreshing iced coffee to cool down<br>your day.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img src="assets/images/tiramisu.png" alt="Tiramisu">
+        <div class="blur-overlay"></div>
+      </div>
+      <div class="card-content">
+        <h3>Tiramisu Brownie</h3>
+        <p>Dessert and coffee in one with delicious<br>tiramisu notes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILED MENU SECTION -->
+<section class="detailed-menu" id="full-menu">
+  
+  <div class="menu-controls">
+    <!-- Category Sub-Nav -->
+    <div class="category-nav">
+      <button class="cat-btn active" data-category="all">All</button>
+      <button class="cat-btn" data-category="sandwiches">Sandwiches</button>
+      <button class="cat-btn" data-category="wraps">Wraps</button>
+      <button class="cat-btn" data-category="chef-special">Chef Special</button>
+      <button class="cat-btn" data-category="lasagne">Lasagne</button>
+      <button class="cat-btn" data-category="salads">Salads</button>
+      <button class="cat-btn" data-category="pizza">Pizza</button>
+      <button class="cat-btn" data-category="potato-shots">Potato Shots</button>
+      <button class="cat-btn" data-category="maggie">Maggie</button>
+      <button class="cat-btn" data-category="italian-breads">Italian Breads</button>
+      <button class="cat-btn" data-category="loaded-fries">Loaded Fries</button>
+      <button class="cat-btn" data-category="signature-drinks">Signature Drinks</button>
+      <button class="cat-btn" data-category="nachos-fries">Nachos & Fries</button>
+      <button class="cat-btn" data-category="pasta">Pasta</button>
+      <button class="cat-btn" data-category="cold-coffee">Cold Coffee</button>
+      <button class="cat-btn" data-category="mocktails">Mocktails</button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="menu-search">
+      <input type="text" id="menuSearchInput" placeholder="Search for a dish...">
+    </div>
+  </div>
+
+  <div class="menu-lists-container">
+    
+    <!-- SANDWICHES -->
+    <div class="menu-category-group" data-category="sandwiches">
+      <h2 class="category-title">Sandwiches</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Cheese Corn Sandwich</h4>
+            <span class="price">180</span>
+          </div>
+          <p>A combination of cheese 'n' corn parked in two layers to give you a heavenly experience</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Veg Club Sandwich</h4>
+            <span class="price">210</span>
+          </div>
+          <p>French Loaf Fresh Lettuce, Coleslaw, Onion, Tomato, Cucumber, Cheese Slice And Served With Fries.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Tandoori Paneer Sandwich</h4>
+            <span class="price">230</span>
+          </div>
+          <p>Paneer is an emotion. Try it to know what it tastes like</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Egg Club Sandwich</h4>
+            <span class="price">240</span>
+          </div>
+          <p>French Loaf Fresh Lettuce, Coleslaw, Onion, Tomato, Cucumber, Fried Egg'S, Cheese Slice And Served With Fries.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Triple Cheese Sandwich</h4>
+            <span class="price">280</span>
+          </div>
+          <p>Onion, tomato, capsicum & lettuce loaded with cheese, blended and placed between three slices of brown breads</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Pesto Grilled Veg Sandwich</h4>
+            <span class="price">280</span>
+          </div>
+          <p>French Loaf Stuffed With English Grilled Veg, Mozzarella, Cocktail Sauce And Served With Fries.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WRAPS -->
+    <div class="menu-category-group" data-category="wraps">
+      <h2 class="category-title">Wraps</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Egg Wrap</h4>
+            <span class="price">160</span>
+          </div>
+          <p>Bell Peppers, Onion, Eggs'S, Rolled With Tortilla And Plain Omelette.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Falafel Wrap</h4>
+            <span class="price">180</span>
+          </div>
+          <p>Toasted With Iceberg, Bell Peppers, Onion, Falafel Tikki Served With Hummus</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Paneer Tikka Wrap</h4>
+            <span class="price">190</span>
+          </div>
+          <p>Toasted With Paneer Tikka, Capsicum, Onion, Chilli And Tandoori Dressing</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Mexican Paneer Wrap</h4>
+            <span class="price">200</span>
+          </div>
+          <p>Toasted With Dry Salsa, Beans, Corn, Grilled Paneer, Served With Dip</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHEF SPECIAL -->
+    <div class="menu-category-group" data-category="chef-special">
+      <h2 class="category-title">Chef Special</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Paneer Bhurji Pao</h4>
+            <span class="price">240</span>
+          </div>
+          <p>Spicy Paneer Bhurji on You'r Traditional Butter Pao and Cheese</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Egg with yougurt</h4>
+            <span class="price">320</span>
+          </div>
+          <p>Turkish egg, jalepino chilli butter sauce, Greek yogurt, pita bread, and zatar</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Cheese Fondue</h4>
+            <span class="price">320</span>
+          </div>
+          <p>Bell Pepper Flavoured With Indian Spices, Cheese And Crispy Finger Bread</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Lebanese platter</h4>
+            <span class="price">350</span>
+          </div>
+          <p>Two Types Of Hummus, Falafel, Salad, Pickle And Served With Pitta Bread</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Paneer steak</h4>
+            <span class="price">370</span>
+          </div>
+          <p>Paneer Steak Pomodoro Sauce, Mashed Potato, Exotic Vegetables Served With Parmesan Shavings</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Mediterranean RICE BOWL</h4>
+            <span class="price">380</span>
+          </div>
+          <p>Herbed Black Rice, Exotic Vegetables, shiitake mushroom, Mashed Potato, Mushroom Sauce And Fineshed With Parmesan Shaving</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Mexican Nacho Bowl</h4>
+            <span class="price">390</span>
+          </div>
+          <p>Nacho Chips, Refined Beans, Cheese Sauce, Salsa, Sour Cream, Corn Niblets, Pico Di Gallo.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Paneer parmigianino</h4>
+            <span class="price">390</span>
+          </div>
+          <p>Crumbed And Fried Paneer Topped And Baked With Rustic Tomato Sauce Mozzarella And Grana Padano</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LASAGNE -->
+    <div class="menu-category-group" data-category="lasagne">
+      <h2 class="category-title">Lasagne</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Lasagne Bolognese</h4>
+            <span class="price">330</span>
+          </div>
+          <p>Lasagne Sheets Layered And Baked With Soya Bolognese, Mozzarella And Grana Padano Served With Bread</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Exotic Grilled Veg Lasagne</h4>
+            <span class="price">360</span>
+          </div>
+          <p>Lasagne Sheets Layered And Baked With Grilled Vegetables, Mozzarella And Grana Padano Served With Bread</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Egg Lasagne</h4>
+            <span class="price">380</span>
+          </div>
+          <p>Lasagne Sheets Layered And Baked With Egg, Mozzarella And Grana Padano Served With Bread.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Spinach Ricotta Lasagne</h4>
+            <span class="price">390</span>
+          </div>
+          <p>Lasagne Rolls Stuffed With Spinach And Ricotta Cheese And Baked With, Mozzarella And Grana Padano Served With Bread</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SALADS -->
+    <div class="menu-category-group" data-category="salads">
+      <h2 class="category-title">Salads</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Watermelon With Feta Salad</h4>
+            <span class="price">240</span>
+          </div>
+          <p>Fresh Watermelon, Lettuce And Feta Cheese Drizzled With balsamic Reduction.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Exotic Sauteed Vegetable Salad</h4>
+            <span class="price">250</span>
+          </div>
+          <p>Sauteed Exotic Vegetable Served With Fresh Bread</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Fresh Fruit Salad</h4>
+            <span class="price">250</span>
+          </div>
+          <p>Apple, Kiwi, Orange, Pomegranate, Pineapple, Grapes.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Veg caesar Salad</h4>
+            <span class="price">260</span>
+          </div>
+          <p>Fresh Romaine Lettuce, Grilled Vegetables Served With Herb Croutons And Caesar Dressing</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Paneer Tikka Salad</h4>
+            <span class="price">260</span>
+          </div>
+          <p>Fresh Ice Berge, Paneer Tikka, Bell Peper And Musterd Dressing</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Cottage Cheese Salad</h4>
+            <span class="price">280</span>
+          </div>
+          <p>Cottage Cheese Assembled With Pesto Sauce, Fresh Lettuce And Orange Veggies</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIZZA -->
+    <div class="menu-category-group" data-category="pizza">
+      <h2 class="category-title">Pizza</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Classic Margarita Pizza</h4>
+            <span class="price">260</span>
+          </div>
+          <p>Classic Margherita Home Made Tomato Sauce Mozzarella And Evo.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Green Garden Pizza</h4>
+            <span class="price">270</span>
+          </div>
+          <p>Authentic No Cheese, Exotic Vegetable And Evo.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Farm Fresh Pizza</h4>
+            <span class="price">290</span>
+          </div>
+          <p>Tasty combination of onion, tomato and capsicum And Mozzarella</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Egg Bhurji Pizza</h4>
+            <span class="price">330</span>
+          </div>
+          <p>Spicy EGG bhurji on our traditional margarita</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Pesto Mushroom Pizza</h4>
+            <span class="price">340</span>
+          </div>
+          <p>Basil Pesto, Mushroom, Caramelized Onion, Feta Cheese, Cherry Tomatoes, Parmesan Cheese And Mozzarella.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Tandoori Paneer Pizza</h4>
+            <span class="price">360</span>
+          </div>
+          <p>Jumble Of Cottage Cheese, Onion, Capsicum With Cheese Blend And Tandoori Mayonnaise. Recommended</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Paneer Bhurji Pizza</h4>
+            <span class="price">360</span>
+          </div>
+          <p>Spicy paneer bhurji on our traditional margarita</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Multi Cheese Nirmana</h4>
+            <span class="price">380</span>
+          </div>
+          <p>Poke Your Senses With This Pizza, Cooked With Onion, Capsicum, Jalapeno And Sweet Corn With Blended Cheese And Jalapeno Cheese Sauce</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- POTATO SHOTS -->
+    <div class="menu-category-group" data-category="potato-shots">
+      <h2 class="category-title">Potato Shots</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Potato Wedges</h4>
+            <span class="price">190</span>
+          </div>
+          <p>Skin-on Potato wedges coated with Special Seasoning & herbs, Served with Mayonnaise</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Pizza Samosa</h4>
+            <span class="price">190</span>
+          </div>
+          <p>Delightful melty cheese in Pizza style Filling Samosas</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Potato Cheese Shots</h4>
+            <span class="price">200</span>
+          </div>
+          <p>Flavoursome union of potatoes, cheese & herb seasoning coated in crunchy Golden breadcrumbs</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAGGIE -->
+    <div class="menu-category-group" data-category="maggie">
+      <h2 class="category-title">Maggie</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Masala Maggie</h4>
+            <span class="price">140</span>
+          </div>
+          <p>Spicy Masaledar Maggie With Mixed Vegetables</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Tandoori Maggie</h4>
+            <span class="price">160</span>
+          </div>
+          <p>Amazing Combination Of Tandoori Sauces With Maggie.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Korean Style Maggi</h4>
+            <span class="price">160</span>
+          </div>
+          <p>Tempered with Burnt Garlic, Soya Sauce and Sesame seeds</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Fry Egg Maggi</h4>
+            <span class="price">170</span>
+          </div>
+          <p>Masala Maggi, Chopped Pepers And Topped With Fried Egg'S.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Cheese Maggie</h4>
+            <span class="price">180</span>
+          </div>
+          <p>Masala Maggie Loaded With Cheese All Over</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITALIAN BREADS -->
+    <div class="menu-category-group" data-category="italian-breads">
+      <h2 class="category-title">Italian Breads</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Cheese Garlic Bread</h4>
+            <span class="price">180</span>
+          </div>
+          <p>Cheese blend, Garlic and Butter</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Scrambled Egg Bruschetta</h4>
+            <span class="price">210</span>
+          </div>
+          <p>Garlic Toast Toped With Soft Scrambled Egg</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Paneer And Rustic Tomato Bruschetta.</h4>
+            <span class="price">220</span>
+          </div>
+          <p>Paneer Tossed With Roast Tomato Sauce, Parmesan Cheese, Mozzarella And Balsamic Reduction.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>OTC Garlic Bread</h4>
+            <span class="price">240</span>
+          </div>
+          <p>Cheese blend, Onion, Tomato, Capsicum with Spices.</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Masala Pulla Part Garlic Bread</h4>
+            <span class="price">340</span>
+          </div>
+          <p>freshly Baked Garlic Bread with Garlic Butter, indian masala and Cheese</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <h4>Pesto Pulla Part Garlic Bread</h4>
+            <span class="price">380</span>
+          </div>
+          <p>freshly Baked Garlic Bread with Garlic Butter, Pesto, diced tomato and cheese</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOADED FRIES -->
+    <div class="menu-category-group" data-category="loaded-fries">
+      <h2 class="category-title">Loaded Fries</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="item-header"><h4>French Fries</h4><span class="price">140</span></div><p>For You, If You're The 'Fries Before Guys' Kind</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Masala Fries</h4><span class="price">160</span></div><p>A Spicy Treat by Chef Special</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Peri Peri Fries</h4><span class="price">180</span></div><p>Fries Topped With your Favourite Peri Peri Spices</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Nachos Fries</h4><span class="price">180</span></div><p>A Combination Of Fries And Nachos, Topped With Chilli And Plain Mayo</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cheese Stick</h4><span class="price">190</span></div><p>Crumbed And Fried Process Cheese Sticks Served With Salsa Sauce</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Mexican Fries</h4><span class="price">200</span></div><p>Fries Topped With Cheese, Mayo And Jalapeno Dressing</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cheese Jalapeno Fries</h4><span class="price">200</span></div><p>Fries Topped With Cheese And Jalapeno Dressing</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Barbeque Fries</h4><span class="price">200</span></div><p>Fries Topped With Tandoori And Chilli Dressing</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cheesy Salsa Fries</h4><span class="price">200</span></div><p>Fries Topped With Cheese And Salsa Dressing</p></div>
+        <div class="menu-item"><div class="item-header"><h4>BAKED FRIES</h4><span class="price">230</span></div><p>Crispy French Fries Backed With Cheese Sauce And Mozzarella Cheese</p></div>
+      </div>
+    </div>
+
+    <!-- SIGNATURE DRINKS -->
+    <div class="menu-category-group" data-category="signature-drinks">
+      <h2 class="category-title">Signature Drinks</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="item-header"><h4>Orange Espresso</h4><span class="price">140</span></div><p>Orange With Espresso</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cranberry Espresso</h4><span class="price">140</span></div><p>Cranberry With Espresso</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Condensed Latte</h4><span class="price">160</span></div><p>Espresso, Milk, Ice With Condensed Milk</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cold Brew</h4><span class="price">160</span></div><p>Black- A Delicate & Complete Drink</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Espresso Tonic</h4><span class="price">180</span></div><p>Espresso, Tonic Water, Ice</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Vietnamese</h4><span class="price">200</span></div><p>Espresso, Condensed, Ice</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Drip Vietnamese</h4><span class="price">220</span></div><p>Live driped cold brew, condensed milk, ice</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cold Brew Tonic</h4><span class="price">220</span></div><p>Cold Brew With Tonic Water</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cranberry Cold Brew</h4><span class="price">220</span></div><p>Cranberry With Cold Brew</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Orange Cold Brew</h4><span class="price">220</span></div><p>Orange With Cold Brew</p></div>
+      </div>
+    </div>
+
+    <!-- NACHOS & FRIES -->
+    <div class="menu-category-group" data-category="nachos-fries">
+      <h2 class="category-title">Nachos & Fries</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="item-header"><h4>Plain Nachos</h4><span class="price">160</span></div><p>Crispy Nachos Chips Served With Salsa Dip</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cheese Nachos</h4><span class="price">220</span></div><p>Chef'S Special Nachos With Cheese And Bell Peppers</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Baked Nachos</h4><span class="price">250</span></div><p>Nachos Loaded With Cheese, Topped With Baked Beans, Black Olives And Veggies</p></div>
+      </div>
+    </div>
+
+    <!-- PASTA -->
+    <div class="menu-category-group" data-category="pasta">
+      <h2 class="category-title">Pasta</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="item-header"><h4>Penne Arrabiata (Red)</h4><span class="price">310</span></div><p>A Spicy Combination Of Fresh Homemade Tomato Sauce, Garlic And Chilly Flakes Served With Bread.</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Penne Alfredo (White)</h4><span class="price">340</span></div><p>A Creamy Sauce With Lots Of Parmesan Cheese Serves With Bread.</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Spaghetti Aglio Olio</h4><span class="price">350</span></div><p>Spaghetti Tossed With Fresh Garlic, Chilly Flakes And Parsley Serves With Bread</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Penne Pink Sauce</h4><span class="price">360</span></div><p>A Combination Of Fresh Homemade Tomato Sauce And Fresh Cream Flavoured With Garlic And Basil Served With Bread</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Penne Creamy Pesto</h4><span class="price">360</span></div><p>A Creamy Combination Of Fresh Pesto, Cream And Lots Of Parmesan Cheese Served With Bread</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Spaghetti Calebrese</h4><span class="price">370</span></div><p>Fresh Home Made Tomate Sauce Tossed With Garlic, Basil, Broccoli And Veg Soya Balls Served With Spaghetti</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Ravioli</h4><span class="price">380</span></div><p>Fresh Homemade Spinach Ricotta Stuffed Pasta With RED/WHITE/PESTO/PINK SAUCE, Served With Bread.</p></div>
+      </div>
+    </div>
+
+    <!-- COLD COFFEE -->
+    <div class="menu-category-group" data-category="cold-coffee">
+      <h2 class="category-title">Cold Coffee</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="item-header"><h4>Café Frappe</h4><span class="price">150</span></div><p>Rich, Creamy And Irresistable Cold Coffee</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Iced Latte</h4><span class="price">160</span></div><p>Rich Espresso And Cold Milk Served Over Ice</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Iced Cappuccino</h4><span class="price">160</span></div><p>Espresso Mixed With Milk, Chocolate And Ice Cubes. Topped With Milk Froth</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Choco Frappe</h4><span class="price">170</span></div><p>Café Frappe With Combination Of Chocolate Fudge</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Dark Chocolate Frappe</h4><span class="price">170</span></div><p>Recommended To Those Who Want Combination Of Dark Chocolate And Frappe At The Same Time</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Iced Mocha Frappe</h4><span class="price">170</span></div><p>Espresso With Chocolate, Milk N Cream Over Ice</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Caramel Creamy Frappe</h4><span class="price">190</span></div><p>Cafe Frappe With The Combination Of Caramel Flavour</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Oreo Frappe</h4><span class="price">190</span></div><p>Oreo Cookies Blended With Ice Cream N Espresso Shot</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Irish Mocha Creamy Frappe</h4><span class="price">190</span></div><p>Cafe Frappe Mixed With Irish N Chocolate Flavour</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Mocha Hazelnut Frappe</h4><span class="price">200</span></div><p>A Delicious Cold Coffee That Is Blended With Chocolate And Hazelnut Flavour</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Tiramisu Frappe</h4><span class="price">200</span></div><p>Brownie Chunks Blended With Amazing Tiramisu Flavour In Cold Coffee</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Popcorn Caramel Frappe</h4><span class="price">200</span></div><p>Rich Combination Of Caramel And Popcorn flavour in Frappe</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Choco Cookie Frappe</h4><span class="price">200</span></div><p>Blend Of Espresso In Ice Cream N Secret Cookie And This Flavour Served With Half Cut Passion</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cookie Crunchy Creamy Frappe</h4><span class="price">220</span></div><p>Unique Flavour Of Hazelnut N Caramel With Chunks Cookies</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Nutella Frappe</h4><span class="price">250</span></div><p>Most Desirable Quencher In One Glass. Nutella Blended With Espresso</p></div>
+      </div>
+    </div>
+
+    <!-- MOCKTAILS -->
+    <div class="menu-category-group" data-category="mocktails">
+      <h2 class="category-title">Mocktails</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="item-header"><h4>Virgin Mojito</h4><span class="price">140</span></div><p>Refreshing Chilled Mint Mojito Flavour Made Using Syrup, Ice, Muddled Lemons N Mint Leaves</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Strawberry Slush</h4><span class="price">140</span></div><p>Strawberry Flavour Blended With Crushed Ice</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Mango Mojito</h4><span class="price">160</span></div><p>Mango, mint 'n' lime. the perfect refresher</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Watermelon Punch</h4><span class="price">160</span></div><p>Watermelon Flavour Refreshing Drink To Fight The Heat</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Green Apple Mojito</h4><span class="price">180</span></div><p>Refreshing drink with green apple flavour</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Cranberry Mojito</h4><span class="price">180</span></div><p>Enjoy the crisp, clean taste of cranberry with mudded lemon 'n' ice</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Pinky Lemonade</h4><span class="price">180</span></div><p>This refreshing punch looks tasty & delicious with the combination of watermelon and lychee flavour</p></div>
+        <div class="menu-item"><div class="item-header"><h4>Gummy Gum</h4><span class="price">180</span></div><p>A mix flavour of bubblegum 'n' cranberry juice</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <!-- Decorative Cups -->
+  <img src="assets/images/coffeeCup.png" alt="Decorative Cup" class="footer-cup left-cup">
+  <img src="assets/images/coffeeCup.png" alt="Decorative Cup" class="footer-cup right-cup">
+  
+  <div class="footer-content">
+    <h2 class="footer-heading">SUBSCRIBE TO GET LATEST NEWS</h2>
+
+    <div class="subscribe-box">
+      <input type="email" placeholder="EMAIL"/>
+      <button>SUBMIT</button>
+    </div>
+
+    <div class="footer-links-grid">
+      <div class="footer-col">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="#">MENU</a></li>
+          <li><a href="#">FEATURES</a></li>
+          <li><a href="#">HELP & SUPPORT</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>COMPANY</h3>
+        <ul>
+          <li><a href="#">HOW WE WORK</a></li>
+          <li><a href="#">TERMS AND CONDITION</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact-col">
+        <h3>CONTACT US</h3>
+        <p>F 5, Jamnalal Bajaj<br>Marg, Ashok Nagar,<br>C Scheme, Jaipur-</p>
+        <p class="phone">+91 9XXXXXXXXX</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
