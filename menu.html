@@ -48,8 +48,54 @@
     <a href="#">About Us</a>
   </nav>
 
-  <button class="btn">Sign In</button>
+  <button type="button" class="btn" id="auth-open-btn" aria-label="Sign in or create an account">Sign In</button>
 </header>
+
+<dialog id="auth-dialog" class="auth-dialog" aria-label="Account and authentication">
+  <div class="auth-dialog-panel">
+    <button type="button" class="auth-close" aria-label="Close">&times;</button>
+    <div id="auth-not-configured" class="auth-banner" hidden>
+      <strong>Next step:</strong> Add your Supabase project URL and anon key to <code>supabase-config.js</code>. See <strong>README.md</strong> for setup.
+    </div>
+    <div id="auth-error" class="auth-msg auth-msg-error" role="alert" hidden></div>
+    <div id="auth-success" class="auth-msg auth-msg-success" role="status" hidden></div>
+
+    <div id="auth-view-guest">
+      <h2 id="auth-dialog-title" class="auth-title">Welcome back</h2>
+      <div class="auth-tabs" role="tablist" aria-label="Sign in or sign up">
+        <button type="button" class="auth-tab active" data-tab="signin" role="tab" aria-selected="true">Sign In</button>
+        <button type="button" class="auth-tab" data-tab="signup" role="tab" aria-selected="false">Sign Up</button>
+      </div>
+      <form id="form-signin" class="auth-form active" autocomplete="on">
+        <label class="auth-label">Email
+          <input type="email" name="email" required autocomplete="email" class="auth-input" />
+        </label>
+        <label class="auth-label">Password
+          <input type="password" name="password" required minlength="6" autocomplete="current-password" class="auth-input" />
+        </label>
+        <button type="submit" class="auth-submit">Sign In</button>
+      </form>
+      <form id="form-signup" class="auth-form" autocomplete="on">
+        <label class="auth-label">Email
+          <input type="email" name="email" required autocomplete="email" class="auth-input" />
+        </label>
+        <label class="auth-label">Password
+          <input type="password" name="password" required minlength="6" autocomplete="new-password" class="auth-input" />
+        </label>
+        <label class="auth-label">Confirm password
+          <input type="password" name="confirm" required minlength="6" autocomplete="new-password" class="auth-input" />
+        </label>
+        <button type="submit" class="auth-submit">Create account</button>
+      </form>
+    </div>
+
+    <div id="auth-view-user" hidden>
+      <h2 class="auth-title">Your account</h2>
+      <p class="auth-email-line">Signed in as <strong id="auth-user-email"></strong></p>
+      <button type="button" class="auth-submit auth-signout" id="auth-signout">Sign out</button>
+    </div>
+  </div>
+</dialog>
 
 <!-- MENU HEADER -->
 <div class="menu-header">
@@ -704,6 +750,8 @@
   </div>
 </footer>
 
+<script src="supabase-config.js"></script>
+<script type="module" src="auth.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
