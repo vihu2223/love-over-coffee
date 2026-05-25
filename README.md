@@ -33,14 +33,25 @@ Authentication uses [Supabase](https://supabase.com/) so you do not need your ow
      - `https://yourdomain.com/`
      - If the site lives in a subfolder (e.g. GitHub Pages): `https://you.github.io/repo-name/` and `https://you.github.io/repo-name/index.html` if needed.
    - The app sends `emailRedirectTo` to the folder of the page where they signed up; that exact URL (with or without trailing slash) must be allowed—add both variants if Supabase rejects the link.
-6. If email confirmation is required for new users, check the inbox (and **spam**) for the confirmation message. Supabase’s built-in email is rate-limited and can be delayed; for production, consider **Authentication → SMTP Settings** with your own provider (Resend, SendGrid, etc.).
-7. To test without email: **Authentication → Providers → Email** and temporarily turn off **Confirm email** (only for development).
+6. If email confirmation is required, the site shows a **Resend confirmation** button (30 second cooldown between sends).
+7. To test without email: **Authentication → Providers → Email** → turn off **Confirm email** (development only).
 
 Treat the anon key as public (it is safe in the browser with Row Level Security on your tables). Never expose the **service role** key in front-end code.
 
+### Not receiving confirmation email in Gmail
+
+1. **Supabase dashboard** → **Authentication** → **Users** — confirm the user exists and is not already confirmed.
+2. **Authentication** → **URL Configuration** — **Site URL** must match your live GitHub Pages URL (not `localhost`).
+3. Check Gmail **Spam**, **Promotions**, and **All Mail** — Supabase’s default sender is often filtered.
+4. Wait a few minutes; free-tier email can be delayed or rate-limited.
+5. Use **Resend confirmation** in the sign-in dialog (wait 30 seconds between attempts).
+6. **Authentication** → **Email Templates** — ensure the “Confirm signup” template is enabled.
+7. For reliable delivery, set up **Authentication** → **SMTP Settings** (Resend, SendGrid, or Gmail SMTP with an app password).
+8. In Supabase **Logs** → **Auth**, check for errors when you sign up or resend.
+
 ### Confirmation link opens the wrong site or shows “redirect_uri_mismatch”
 
-Your **Site URL** or **Redirect URLs** in Supabase do not include the URL in the confirmation email. Update URL Configuration as in step 5, redeploy, then sign up again (or resend confirmation from the dashboard if available).
+Your **Site URL** or **Redirect URLs** in Supabase do not include the URL in the confirmation email. Update URL Configuration as in step 5, redeploy, then sign up again or use **Resend confirmation** in the app.
 
 ## 🚀 Getting Started
 

@@ -1,5 +1,6 @@
 /**
  * Supabase project credentials (Dashboard → Project Settings → API).
+ * Use either the publishable key OR the legacy "anon public" JWT (starts with eyJ).
  * Do not commit production keys to a public repository.
  *
  * @see https://supabase.com/dashboard
