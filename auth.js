@@ -238,9 +238,11 @@ function showUserView(email) {
   if (banner) banner.hidden = true;
 }
 
-async function openDialog() {
+async function openDialog(keepMessages = false) {
   if (!dialog) return;
-  clearMessages();
+  if (!keepMessages) {
+    clearMessages();
+  }
   updateRedirectHint();
   if (!isConfigured) {
     showGuestView();
@@ -311,7 +313,7 @@ async function initAuthOnLoad() {
       updateNav(session);
       showSuccess(`Email confirmed. Welcome, ${session.user.email.split("@")[0]}!`);
       window.history.replaceState({}, document.title, window.location.pathname);
-      openDialog();
+      openDialog(true);
       showUserView(session.user.email);
       return;
     }
