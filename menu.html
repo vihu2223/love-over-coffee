@@ -66,24 +66,7 @@
     <div id="auth-error" class="auth-msg auth-msg-error" role="alert" hidden></div>
     <div id="auth-success" class="auth-msg auth-msg-success" role="status" hidden></div>
 
-    <div id="auth-email-help" class="auth-banner auth-email-help" hidden>
-      <strong>Confirmation email not arriving?</strong>
-      <ol>
-        <li>In Supabase → <strong>Authentication → URL Configuration</strong>, set <strong>Site URL</strong> and add this to <strong>Redirect URLs</strong>:<br><code id="auth-redirect-hint"></code></li>
-        <li>Check Gmail <strong>Spam</strong> and <strong>Promotions</strong>.</li>
-        <li>Supabase → <strong>Logs → Auth</strong> — look for errors when you sign up.</li>
-        <li>For reliable Gmail delivery, enable <strong>Authentication → SMTP Settings</strong> (Resend, SendGrid, etc.). Free Supabase email is often blocked.</li>
-      </ol>
-    </div>
 
-    <div id="auth-resend-wrap" class="auth-resend" hidden>
-      <p class="auth-resend-hint">Check your <strong>Spam</strong> and <strong>Promotions</strong> folder (Gmail). Then resend below.</p>
-      <p class="auth-resend-email">To: <strong id="auth-resend-email"></strong></p>
-      <button type="button" id="auth-resend-btn" class="auth-submit auth-resend-btn" disabled>Resend confirmation (30s)</button>
-    </div>
-    <p class="auth-resend-link-wrap">
-      <button type="button" id="auth-resend-link" class="auth-link-btn">Didn't get the confirmation email?</button>
-    </p>
 
     <div id="auth-view-guest">
       <h2 id="auth-dialog-title" class="auth-title">Welcome back</h2>
